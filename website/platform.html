@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Platform Preview | THA_O11 RAIP</title>
+    <link rel="stylesheet" href="styles/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="THA_O11 home">
+        <span class="brand-mark">T11</span>
+        <span><strong>THA_O11</strong><small>RAIP</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="platform.html" aria-current="page">Platform</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero section-band">
+        <p class="eyebrow">Local interface preview</p>
+        <h1>Campaign brief workspace.</h1>
+        <p class="lead">
+          This is a front-end-only preview. It creates a local campaign summary
+          in your browser without connecting to any paid AI service.
+        </p>
+      </section>
+
+      <section class="workspace">
+        <form class="brief-form" id="briefForm">
+          <label>
+            Campaign goal
+            <input name="goal" value="Increase RUPSA member signups" />
+          </label>
+          <label>
+            Target audience
+            <select name="audience">
+              <option>Teachers and educators</option>
+              <option>Small business owners</option>
+              <option>Farmers</option>
+              <option>Young professionals</option>
+              <option>Women and youth groups</option>
+              <option>Retirees</option>
+            </select>
+          </label>
+          <label>
+            Channel
+            <select name="channel">
+              <option>WhatsApp poster</option>
+              <option>Facebook post</option>
+              <option>SMS</option>
+              <option>Email</option>
+              <option>Radio script</option>
+            </select>
+          </label>
+          <label>
+            Offer or message
+            <textarea name="message" rows="5">Join RUPSA and access savings support, member-focused loans, and trusted financial guidance.</textarea>
+          </label>
+          <button class="button primary" type="submit">Generate Local Preview</button>
+        </form>
+
+        <aside class="preview-panel" aria-live="polite">
+          <div class="preview-header">
+            <span>RUPSA SACCO</span>
+            <strong>Draft Campaign</strong>
+          </div>
+          <h2 id="previewTitle">Increase RUPSA member signups</h2>
+          <p id="previewCopy">
+            Join RUPSA and access savings support, member-focused loans, and trusted financial guidance.
+          </p>
+          <div class="score-list">
+            <div><span>Brand fit</span><strong id="scoreBrand">92%</strong></div>
+            <div><span>Clarity</span><strong id="scoreClarity">86%</strong></div>
+            <div><span>Audience match</span><strong id="scoreAudience">88%</strong></div>
+          </div>
+          <p class="recommendation" id="recommendation">
+            Recommended next step: test a WhatsApp poster against a shorter SMS call-to-action.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>THA_O11 RAIP - platform preview.</p>
+      <a href="contact.html">Contact</a>
+    </footer>
+    <script src="scripts/site.js"></script>
+  </body>
+</html>
+

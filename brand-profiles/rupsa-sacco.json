@@ -1,0 +1,71 @@
+{
+  "profileId": "rupsa-sacco",
+  "organizationName": "RUPSA Regulated NWDT Sacco Ltd",
+  "organizationType": "SACCO",
+  "brand": {
+    "primaryColor": "#00FF00",
+    "secondaryColor": "#000000",
+    "backgroundColor": "#FFFFFF",
+    "fontFamily": "Inter, Arial, sans-serif",
+    "logoPath": "assets/brand/rupsa-logo.png",
+    "tagline": "Financial growth with trusted SACCO support"
+  },
+  "contact": {
+    "phone": "+254 XXX XXX XXX",
+    "email": "info@rupsa-sacco.co.ke",
+    "website": "https://www.rupsa-sacco.co.ke",
+    "location": "Kenya"
+  },
+  "audiences": [
+    "teachers and educators",
+    "farmers",
+    "small business owners",
+    "young professionals",
+    "women groups",
+    "youth groups",
+    "church members",
+    "retirees",
+    "diaspora members"
+  ],
+  "channels": [
+    "Facebook",
+    "Instagram",
+    "WhatsApp",
+    "SMS",
+    "Email",
+    "TikTok",
+    "YouTube Shorts",
+    "Radio"
+  ],
+  "toneOfVoice": [
+    "professional",
+    "clear",
+    "trustworthy",
+    "financially empowering",
+    "localized for Kenya"
+  ],
+  "marketingRules": [
+    "Use plain language that can be understood across age groups.",
+    "Make the offer, benefit, and action clear.",
+    "Avoid exaggerated financial promises.",
+    "Keep SACCO trust, savings growth, loan access, and member value central.",
+    "Include contact details or a next action on every campaign asset."
+  ],
+  "approvalWorkflow": [
+    "Draft",
+    "Internal review",
+    "Compliance and brand check",
+    "Management approval",
+    "Publish",
+    "Measure"
+  ],
+  "analyticsGoals": [
+    "increase inquiries",
+    "increase member signups",
+    "increase loan uptake",
+    "increase savings deposits",
+    "improve campaign engagement",
+    "measure campaign ROI"
+  ]
+}
+

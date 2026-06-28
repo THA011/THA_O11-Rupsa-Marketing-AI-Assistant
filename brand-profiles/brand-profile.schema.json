@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tha-o11.local/schemas/brand-profile.schema.json",
+  "title": "RAIP Brand Profile",
+  "type": "object",
+  "required": [
+    "profileId",
+    "organizationName",
+    "organizationType",
+    "brand",
+    "contact",
+    "audiences",
+    "channels",
+    "toneOfVoice",
+    "approvalWorkflow"
+  ],
+  "properties": {
+    "profileId": { "type": "string" },
+    "organizationName": { "type": "string" },
+    "organizationType": { "type": "string" },
+    "brand": {
+      "type": "object",
+      "required": ["primaryColor", "secondaryColor", "backgroundColor", "fontFamily"],
+      "properties": {
+        "primaryColor": { "type": "string" },
+        "secondaryColor": { "type": "string" },
+        "backgroundColor": { "type": "string" },
+        "fontFamily": { "type": "string" },
+        "logoPath": { "type": "string" },
+        "tagline": { "type": "string" }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "website": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "audiences": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "channels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "toneOfVoice": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "marketingRules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "approvalWorkflow": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "analyticsGoals": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
+
