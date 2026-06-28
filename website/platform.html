@@ -24,10 +24,11 @@
     <main>
       <section class="page-hero section-band">
         <p class="eyebrow">Local interface preview</p>
-        <h1>Campaign brief workspace.</h1>
+        <h1>Draft a campaign brief and see the first scoring pass.</h1>
         <p class="lead">
-          This is a front-end-only preview. It creates a local campaign summary
-          in your browser without connecting to any paid AI service.
+          This page is intentionally local. It updates the preview in your
+          browser, saves the latest brief on this machine, and avoids paid APIs
+          while the workflow is still being shaped.
         </p>
       </section>
 
@@ -62,7 +63,7 @@
             Offer or message
             <textarea name="message" rows="5">Join RUPSA and access savings support, member-focused loans, and trusted financial guidance.</textarea>
           </label>
-          <button class="button primary" type="submit">Generate Local Preview</button>
+          <button class="button primary" type="submit">Update Preview</button>
         </form>
 
         <aside class="preview-panel" aria-live="polite">
@@ -82,6 +83,7 @@
           <p class="recommendation" id="recommendation">
             Recommended next step: test a WhatsApp poster against a shorter SMS call-to-action.
           </p>
+          <p class="saved-note" id="savedNote">Latest brief is stored only in this browser after you update it.</p>
         </aside>
       </section>
     </main>
@@ -93,4 +95,3 @@
     <script src="scripts/site.js"></script>
   </body>
 </html>
-

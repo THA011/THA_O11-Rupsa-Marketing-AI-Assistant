@@ -1,42 +1,93 @@
-# RAIP Modules
+# Platform Modules
 
-## Agent Roles
+These modules describe responsibilities, not separate apps yet. Keep them simple until the prototype needs more structure.
 
-### Marketing Director AI
+## Campaign Planner
 
-Plans campaigns, selects channels, defines campaign objectives, and translates business goals into campaign briefs.
+Turns a rough request into a clear campaign brief.
 
-### Copywriter AI
+Inputs:
 
-Writes headlines, captions, CTAs, SMS messages, email sequences, radio scripts, and video scripts.
+- Campaign goal.
+- Target audience.
+- Channel.
+- Main offer.
+- Deadline or event date.
+- Success measure.
 
-### Graphic Designer AI
+Outputs:
 
-Creates layout instructions, poster concepts, visual hierarchy, brand consistency checks, and design prompts for external tools.
+- Clean brief.
+- Suggested channel priority.
+- Notes for approval.
 
-### Video Producer AI
+## Copy Desk
 
-Creates short-form video concepts, shot lists, voice-over scripts, captions, and motion graphics directions.
+Writes practical campaign text.
 
-### Statistician AI
+Outputs:
 
-Builds A/B tests, explains metrics, runs regression and segmentation analysis, forecasts performance, and reports uncertainty.
+- Headline.
+- SMS version.
+- WhatsApp version.
+- Facebook/Instagram caption.
+- Email subject and body.
+- Short radio or video script.
 
-### Research Assistant AI
+## Brand Checker
 
-Supports surveys, methodology, literature reviews, data cleaning plans, ethics notes, APA reporting, and publication drafts.
+Keeps the work inside the selected organization's rules.
 
-### Prompt Engineer AI
+Checks:
 
-Turns campaign goals into optimized prompts for LLMs, image tools, video tools, and design tools.
+- Does the tone match the profile?
+- Are contact details included where needed?
+- Is the claim realistic?
+- Is the call-to-action clear?
+- Does the campaign respect the approval workflow?
 
-## Operating Principle
+## Statistics Desk
 
-Each module should produce structured output that another module can use. For example:
+Explains how to test and measure the campaign.
 
-- Marketing Director AI creates the brief.
-- Copywriter AI creates text variants.
-- Graphic Designer AI creates layout prompts.
-- Statistician AI scores variants and recommends tests.
-- Research Assistant AI records assumptions and prepares reports.
+Starts with:
+
+- Simple scores.
+- A/B test suggestions.
+- KPI suggestions.
+- Audience fit notes.
+
+Later adds:
+
+- Regression.
+- Logistic regression.
+- Clustering.
+- Forecasting.
+- Confidence intervals.
+
+## Research Desk
+
+Keeps campaign work useful for academic reporting.
+
+Outputs:
+
+- Research assumptions.
+- Survey ideas.
+- Methodology notes.
+- Data cleaning checklist.
+- Findings summary.
+
+## Asset Library
+
+Stores the working materials.
+
+Examples:
+
+- Poster decks.
+- Videos.
+- Brand files.
+- Campaign templates.
+- Exported reports.
+
+Current local assets live in `assets/images/`.
 

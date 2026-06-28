@@ -13,6 +13,7 @@
   --shadow: 0 24px 70px rgba(16, 20, 18, 0.14);
 }
 
+/* Base layout: this site is intentionally static and local-first. */
 * {
   box-sizing: border-box;
 }
@@ -60,6 +61,7 @@ h3 {
   z-index: 10;
 }
 
+/* Brand and navigation stay consistent across every static page. */
 .brand-link {
   align-items: center;
   display: inline-flex;
@@ -183,6 +185,8 @@ h3 {
   color: var(--ink);
 }
 
+/* Dashboard art is CSS-only so the website has a visual identity without
+   depending on image-generation services or stock assets. */
 .dashboard-visual {
   align-self: center;
   background: #121713;
@@ -403,6 +407,7 @@ h3 {
   padding: 24px;
 }
 
+/* Form fields are shared by Platform and Contact to keep later backend wiring simple. */
 .brief-form {
   display: grid;
   gap: 16px;
@@ -468,6 +473,17 @@ textarea {
 .recommendation {
   border-left: 4px solid var(--green);
   padding-left: 14px;
+}
+
+.saved-note,
+.form-status {
+  color: #6d7770;
+  font-size: 0.92rem;
+  margin-top: 14px;
+}
+
+.preview-panel .saved-note {
+  color: #b9c7be;
 }
 
 .site-footer {
@@ -537,4 +553,3 @@ textarea {
     flex-direction: column;
   }
 }
-

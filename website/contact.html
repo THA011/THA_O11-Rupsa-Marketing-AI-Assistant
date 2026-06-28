@@ -24,28 +24,30 @@
     <main>
       <section class="page-hero section-band">
         <p class="eyebrow">Contact</p>
-        <h1>Prepare the next RAIP build step.</h1>
+        <h1>Leave a local note for the next build step.</h1>
         <p class="lead">
-          Use this page as the local placeholder for project inquiries, client
-          setup, and campaign brief intake.
+          This form stores a draft note in this browser. Use it for project
+          ideas, client setup notes, and campaign intake before backend storage
+          is added.
         </p>
       </section>
 
       <section class="content-section two-column">
-        <form class="brief-form">
+        <form class="brief-form" id="contactForm">
           <label>
             Name
-            <input placeholder="Your name" />
+            <input name="name" placeholder="Your name" />
           </label>
           <label>
             Organization
-            <input placeholder="RUPSA SACCO or another organization" />
+            <input name="organization" placeholder="RUPSA SACCO or another organization" />
           </label>
           <label>
             Message
-            <textarea rows="6" placeholder="Describe the campaign, service, or profile you want to build next."></textarea>
+            <textarea name="message" rows="6" placeholder="Describe the campaign, service, or profile you want to build next."></textarea>
           </label>
-          <button class="button primary" type="button">Save Draft Locally</button>
+          <button class="button primary" type="submit">Save Draft Locally</button>
+          <p class="form-status" id="contactStatus">Nothing saved yet.</p>
         </form>
 
         <div class="note-panel">
@@ -53,15 +55,15 @@
           <p><strong>Project:</strong> THA_O11 RAIP</p>
           <p><strong>Profile:</strong> RUPSA SACCO</p>
           <p><strong>Mode:</strong> Localhost prototype</p>
-          <p><strong>Next step:</strong> connect real campaign data and backend storage.</p>
+          <p><strong>Next step:</strong> connect profile-driven campaign data and backend storage.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>THA_O11 RAIP - contact placeholder.</p>
+      <p>THA_O11 RAIP - local intake.</p>
       <a href="index.html">Back home</a>
     </footer>
+    <script src="scripts/site.js"></script>
   </body>
 </html>
-

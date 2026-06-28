@@ -1,227 +1,105 @@
 # THA_O11 - RUPSA AI Intelligence Platform
 
-## SACCO Marketing, Statistics, Research, and Business Intelligence
+RAIP is a local-first campaign workspace for RUPSA SACCO. The first version is a static website that explains the product idea and gives a working campaign brief preview. It does not need paid APIs, accounts, databases, or subscriptions.
 
-**Status:** Product direction finalized; scaffold in development  
-**Version:** 0.1.0  
-**Short name:** RAIP  
-**First client/profile:** RUPSA Regulated NWDT Sacco Ltd  
-**Target audience:** Kenyans aged 30-90 years  
-**Primary use:** Marketing automation + statistical decision support + research reporting
+The longer-term direction is a reusable platform for SACCO marketing, campaign scoring, research notes, and business intelligence. RUPSA is the first profile, not the only possible client.
 
----
+## What Works Now
 
-## Project Overview
+- Local website running on `http://localhost:3000`.
+- Home, About, Services, Platform, and Contact pages.
+- Campaign preview form on the Platform page.
+- Simple deterministic campaign scoring.
+- Local browser storage for the latest campaign brief.
+- Local browser storage for Contact page notes.
+- RUPSA brand profile JSON.
+- Product notes, roadmap, module notes, and copy strategy.
 
-THA_O11 - RUPSA AI Intelligence Platform (RAIP) is an enterprise-grade AI platform that starts with RUPSA SACCO but is designed to become a configurable multi-organization system.
+## Run Locally
 
-The original "RUPSA Marketing AI Assistant" is now treated as the first module and first client profile, not the full limit of the product. The bigger goal is an AI operating platform for SACCO marketing, research, statistics, brand management, content production, and business intelligence.
-
-RAIP combines:
-
-- **Marketing Automation** - Generate ads, posters, flyers, scripts, email, SMS, and social content.
-- **AI Intelligence** - Audience segmentation, smart messaging, prompt engineering, and brand-aware recommendations.
-- **Statistical Analytics** - Predictive models, campaign ROI, customer insights, A/B testing, and confidence intervals.
-- **Research Framework** - Bachelor's statistics capstone project foundation with survey and reporting support.
-- **Multi-Organization Profiles** - RUPSA is the first profile; later clients can reuse the same system through brand profiles.
-
-Product decision docs:
-
-- [Final Idea](docs/product/FINAL_IDEA.md)
-- [Roadmap](docs/product/ROADMAP.md)
-- [Modules](docs/product/MODULES.md)
-- [Copy Strategy](docs/product/COPY_STRATEGY.md)
-- [RUPSA Brand Profile](brand-profiles/rupsa-sacco.json)
-
----
-
-## Brand
-
-**THA_O11** means **Thriving.Horned.Artistry**.
-
-Brand focus:
-
-- Artistic marketing with statistical rigor.
-- Practical tools for SACCO growth.
-- Evidence-based campaign decisions.
-- Kenyan market context.
-
-Primary colors:
-
-- Lime Green: `#00FF00`
-- Black: `#000000`
-- White: `#FFFFFF`
-
----
-
-## Core Modules
-
-### Marketing AI
-
-Campaign planning, posters, social posts, WhatsApp graphics, SMS, email, video scripts, slogans, CTAs, and radio scripts.
-
-### Brand AI
-
-Brand profile loading, colors, logo paths, tone of voice, design rules, contact details, and approval requirements.
-
-### Statistics AI
-
-A/B testing, campaign scoring, regression, logistic regression, ANOVA, correlation, clustering, PCA, forecasting, ROI analysis, and confidence intervals.
-
-### Research AI
-
-Survey design, data cleaning, literature review support, methodology drafting, APA-style reporting, and export-ready research outputs.
-
-### Prompt Engineering AI
-
-Optimized prompts for ChatGPT, Claude, Gemini, Midjourney, Runway, Veo, Sora, Leonardo, Canva AI, and related tools.
-
-### Executive Dashboard
-
-Campaign performance, customer intelligence, predicted engagement, conversion probability, ROI, and research summaries.
-
----
-
-## Project Structure
-
-```text
-THA_O11-Rupsa-Marketing-AI-Assistant/
-  ai-engine/              Prompt templates and generators
-  assets/                 Brand assets, icons, images, and templates
-  backend/                FastAPI backend scaffold
-  brand-profiles/         Multi-organization brand configuration
-  database/               Migrations and schemas
-  deployment/             Docker/cloud deployment files
-  docs/
-    architecture/         System and database architecture
-    product/              Final idea, roadmap, modules, copy strategy
-    research/             Research methodology notes
-  frontend/               Next.js frontend scaffold
-  research/               Survey data, datasets, and reports
-  statistics/             Analysis and statistical models
-  tests/                  Frontend, backend, and AI tests
-```
-
----
-
-## Multi-Organization Strategy
-
-RUPSA is the first client profile. Future organizations should be added through `brand-profiles/` instead of hard-coding new behavior.
-
-Each profile can define:
-
-- Organization name and type.
-- Logo, colors, typography, and tagline.
-- Contact details.
-- Target audiences.
-- Supported channels.
-- Tone of voice.
-- Marketing rules.
-- Approval workflow.
-- Analytics goals.
-
-Use [brand-profiles/template.json](brand-profiles/template.json) when making a later copy for another organization.
-
----
-
-## Tech Stack
-
-Frontend:
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Zustand
-- Recharts or Plotly
-
-Backend:
-
-- Python
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- Redis
-- Celery
-
-AI and analytics:
-
-- OpenAI / Anthropic / other LLM APIs
-- Pandas
-- NumPy
-- SciPy
-- Scikit-learn
-- Statsmodels
-- Matplotlib / Plotly / Seaborn
-
----
-
-## Development Setup
-
-For the current local website prototype:
-
-```bash
-npm run dev
-```
-
-On this Windows PowerShell setup, use this if `npm.ps1` is blocked:
+From the project root:
 
 ```bash
 npm.cmd run dev
 ```
 
-Expected local service:
-
-- Website: `http://localhost:3000`
-
-Future backend setup will use:
-
-```bash
-pip install -r requirements.txt
-cp .env.example .env
-python -m uvicorn backend.main:app --reload
-```
-
-## Local Website Prototype
-
-The current working website is in [website](website/). It is a static local prototype with pages for Home, About, Services, Platform Preview, and Contact.
-
-Run it from the project root:
-
-```bash
-npm run dev
-```
-
-On this Windows PowerShell setup, use this if `npm.ps1` is blocked:
-
-```bash
-npm.cmd run dev
-```
-
-Then open:
+Open:
 
 ```text
 http://localhost:3000
 ```
 
-This prototype does not require paid APIs, API keys, databases, external AI services, or subscriptions.
+`npm run dev` also works in shells where PowerShell does not block `npm.ps1`.
 
----
+## Quick Checks
 
-## Build Order
+```bash
+npm.cmd run build
+node --check website/scripts/site.js
+```
 
-1. Load and validate the RUPSA brand profile.
-2. Build campaign brief creation.
-3. Generate branded copy for WhatsApp, SMS, Facebook, Instagram, email, and posters.
-4. Add simple explainable campaign scoring.
-5. Add analytics tracking and A/B test planning.
-6. Add research/report export.
-7. Add multi-organization profile switching.
+Then check these pages in the browser:
 
----
+```text
+http://localhost:3000/
+http://localhost:3000/about.html
+http://localhost:3000/services.html
+http://localhost:3000/platform.html
+http://localhost:3000/contact.html
+```
 
-## Current Decision
+## Folder Map
 
-The finalized direction is:
+```text
+website/                 Working static website
+brand-profiles/          RUPSA profile and reusable profile schema
+docs/product/            Product direction, roadmap, modules, copy strategy
+docs/architecture/       Database and architecture notes
+docs/DEVELOPMENT_NOTES.md Practical build notes for the next developer
+assets/brand/            Brand guidelines
+assets/images/           Poster deck and exported campaign video
+backend/                 Future backend area
+database/                Future database area
+statistics/              Future statistics area
+research/                Future research area
+```
 
-> Build RAIP as a reusable AI intelligence platform, with RUPSA SACCO as the first configured client and marketing AI as the first module.
+## Product Direction
+
+The platform should help a user move from a rough marketing request to a clear campaign decision:
+
+1. Define the campaign goal.
+2. Choose the audience and channel.
+3. Draft the message.
+4. Check brand fit and clarity.
+5. Decide what to test next.
+6. Save evidence for reporting and research.
+
+The important rule is simple: keep reusable workflow in the platform and keep client-specific details in brand profiles.
+
+## Key Docs
+
+- [Final idea](docs/product/FINAL_IDEA.md)
+- [Roadmap](docs/product/ROADMAP.md)
+- [Modules](docs/product/MODULES.md)
+- [Copy strategy](docs/product/COPY_STRATEGY.md)
+- [Development notes](docs/DEVELOPMENT_NOTES.md)
+- [RUPSA brand profile](brand-profiles/rupsa-sacco.json)
+
+## Current Limits
+
+This is not yet a production web app. The current build is intentionally local and static while the workflow is being refined.
+
+Not connected yet:
+
+- Real AI providers.
+- User accounts.
+- Backend storage.
+- PostgreSQL.
+- Live social publishing.
+- Payment or subscription features.
+
+## Next Good Build
+
+Load `brand-profiles/rupsa-sacco.json` into the Platform page so the audience and channel options come from profile data instead of being written directly in HTML.
+

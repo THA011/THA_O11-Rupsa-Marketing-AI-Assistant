@@ -1,43 +1,41 @@
-# Copy Strategy for Future Organizations
+# Copy Strategy for Another Organization
 
-## Goal
+The safest way to reuse this project is to keep the platform the same and change the profile.
 
-Future projects should reuse the RAIP concept without rebuilding the platform from zero.
+## Keep
 
-## What Stays the Same
-
-- AI module structure.
+- Website structure.
 - Campaign brief workflow.
-- Prompt template system.
-- Statistics and analytics methods.
-- Research/reporting workflow.
-- Dashboard concepts.
-- Approval pipeline.
+- Scoring approach.
+- Research notes.
+- Dashboard layout.
+- Developer setup.
 
-## What Changes
+## Change
 
-- Brand profile.
+- Organization name.
 - Logo and colors.
 - Tone of voice.
-- Audiences and locations.
-- Campaign templates.
+- Audiences.
+- Channels.
 - Contact details.
 - Marketing rules.
-- Organization-specific compliance rules.
-- Analytics goals.
+- Approval steps.
+- Example campaigns.
 
-## Recommended Copy Process
+## Step-by-Step
 
 1. Copy `brand-profiles/template.json`.
 2. Rename it using the new organization slug.
-3. Fill in brand, contact, audience, channel, and rule details.
-4. Add organization-specific assets under `assets/brand/`.
-5. Add any campaign templates under `assets/templates/`.
-6. Keep core platform code shared unless the new organization requires a genuinely different workflow.
+3. Fill in the new organization's brand, contact, audience, and channel data.
+4. Add new brand files under `assets/brand/`.
+5. Add campaign examples under `assets/images/` or `assets/templates/`.
+6. Update the website copy only where the organization is named directly.
+7. Keep the core campaign and scoring logic shared.
 
-## Naming Convention
+## Naming
 
-Use:
+Use a clear folder/repo name:
 
 ```text
 THA_O11-[Client]-AI-Intelligence-Platform
@@ -50,4 +48,8 @@ THA_O11-RUPSA-AI-Intelligence-Platform
 THA_O11-XYZ-SACCO-AI-Intelligence-Platform
 THA_O11-School-AI-Intelligence-Platform
 ```
+
+## Copy Rule
+
+If a change is useful for more than one organization, keep it in the shared platform. If it is only about one client, keep it in that client's brand profile or asset folder.
 

@@ -1,117 +1,81 @@
 # THA_O11 - RUPSA AI Intelligence Platform
 
-## Final Product Direction
+## Working Decision
 
-This project should move forward as **THA_O11 - RUPSA AI Intelligence Platform (RAIP)**.
+This project is no longer just a "marketing AI assistant." The working direction is **THA_O11 - RUPSA AI Intelligence Platform**, shortened to **RAIP**.
 
-The original "RUPSA Marketing AI Assistant" remains the first visible product, but it should not be the full boundary of the system. Marketing AI is the first module inside a broader AI operating platform for SACCO marketing, research, statistics, brand management, content production, and business intelligence.
+RUPSA is the first organization we are building around. The important design choice is that RUPSA should be a profile inside the platform, not a hard-coded limit. Later, the same system should be able to support another SACCO, school, NGO, church, hospital, or small business by changing the brand profile and campaign rules.
 
-## Core Thesis
+## Plain-English Product Idea
 
-The platform should not simply answer:
+The platform should help answer questions like:
 
-> Generate a poster.
+- What campaign should we run?
+- Who exactly is it for?
+- What message is likely to be trusted?
+- Which channel should we use first?
+- How do we know whether it worked?
 
-It should answer:
-
-> What marketing problem are we solving, for which audience, with which evidence, in which brand voice, and how will we measure success?
-
-That makes the product stronger than a design generator. It becomes a decision-support system.
+So the system is not only a content generator. It is meant to be a small decision-support workspace for campaign planning, brand control, statistics, and research.
 
 ## Product Name
 
-**Internal platform name:** THA_O11 - RUPSA AI Intelligence Platform  
+**Platform name:** THA_O11 - RUPSA AI Intelligence Platform  
 **Short name:** RAIP  
-**First client/profile:** RUPSA SACCO  
-**Commercial category:** Multi-organization AI intelligence platform for SACCOs and service organizations
+**First profile:** RUPSA SACCO  
+**Category:** Local-first SACCO marketing, analytics, and research platform
 
-## Strategic Positioning
+## What Makes It Different
 
-RAIP combines four strengths:
+The statistics side is the strongest part of the idea. Plenty of tools can make a poster or caption. RAIP should go one step further and help score, compare, test, and explain campaigns.
 
-1. Brand-aware content generation.
-2. Campaign planning and automation.
-3. Statistical measurement and prediction.
-4. Research-grade reporting.
+The first version can use simple explainable scoring. Later versions can add proper campaign data, A/B testing, regression, segmentation, and forecasting.
 
-The statistics layer is the competitive advantage. Many tools can generate attractive content, but RAIP should estimate, test, explain, and report campaign effectiveness.
+## Core Parts
 
-## Core Modules
+### Marketing Workspace
 
-### 1. Marketing AI
+Creates campaign briefs, headlines, SMS copy, WhatsApp copy, email drafts, social captions, poster direction, and radio/video script ideas.
 
-Plans campaigns, generates copy, creates posters, prepares social posts, and adapts messages for different Kenyan audiences and channels.
+### Brand Profile
 
-### 2. Brand AI
+Stores the organization identity: colors, logo paths, tone, target audiences, approval steps, contact details, and rules that every campaign should respect.
 
-Keeps output consistent with the selected organization's logo, colors, tone, contact details, approval rules, and visual identity.
+### Statistics Layer
 
-### 3. Statistics AI
+Starts with practical scoring and later grows into A/B testing, regression, correlation, clustering, forecasting, ROI analysis, and confidence intervals.
 
-Supports A/B tests, regression, ANOVA, correlation, PCA, clustering, logistic regression, forecasting, ROI analysis, campaign scoring, and confidence intervals.
+### Research Layer
 
-### 4. Research AI
+Supports survey planning, methodology notes, data cleaning plans, report structure, and academic write-ups for a statistics project.
 
-Supports survey design, data cleaning, literature review outlines, methodology drafting, APA-style reporting, ethics notes, and publication-ready analysis.
+### Dashboard
 
-### 5. Prompt Engineering AI
-
-Builds optimized prompts for ChatGPT, Claude, Gemini, Midjourney, Runway, Veo, Sora, Leonardo, Canva AI, and other creative systems.
-
-### 6. Content Studio
-
-Produces posters, flyers, brochures, reels, TikToks, YouTube shorts, radio scripts, WhatsApp graphics, email campaigns, and SMS copy.
-
-### 7. Campaign Manager
-
-Tracks campaign briefs, target audiences, generated variants, approvals, publishing status, performance metrics, and lessons learned.
-
-### 8. Executive Dashboard
-
-Shows campaign performance, customer intelligence, predicted engagement, conversion probability, ROI, research findings, and strategic recommendations.
-
-## Multi-Organization Rule
-
-RUPSA should be the first profile, not the hard-coded product.
-
-Every client should be represented by a configurable brand profile containing:
-
-- Organization name
-- Logo paths
-- Colors
-- Typography
-- Contact details
-- Tone of voice
-- Approval workflow
-- Marketing rules
-- Supported channels
-- Campaign templates
-- Research preferences
-- Analytics goals
-
-This makes it possible to later copy the project for a different organization while keeping the same platform concept.
+Shows the campaign brief, draft output, score summary, next test recommendation, and eventually real performance data.
 
 ## First Build Scope
 
-The first usable version should focus on:
+The first usable build should stay small:
 
-1. Brand profile loading for RUPSA.
-2. Campaign brief creation.
-3. AI-generated copy for posters, WhatsApp, SMS, Facebook, Instagram, and email.
-4. Basic audience selection.
-5. Campaign scoring with simple explainable metrics.
-6. Research-ready export of campaign assumptions and results.
+1. Load the RUPSA brand profile.
+2. Let the user create a campaign brief.
+3. Produce local draft copy and a preview.
+4. Save the latest brief in the browser.
+5. Show simple scoring and a next-step recommendation.
+6. Keep the website running on localhost without paid services.
 
-## Later Copy Strategy
+## Not in Scope Yet
 
-When creating a later copy for a different organization, do not duplicate core logic first. Copy or create a new brand profile, then reuse:
+These should wait until the local prototype feels solid:
 
-- Campaign workflow
-- AI prompt templates
-- Analytics scoring framework
-- Research/reporting structure
-- Dashboard layout
-- Content generation pipeline
+- Real AI provider integration.
+- User accounts.
+- Payment or subscription features.
+- Live publishing to social media.
+- Production database.
+- Full statistical modelling.
 
-Only customize brand profile data, market assumptions, templates, and approval rules.
+## Rule for Future Copies
+
+When making a copy for another organization, start by creating a new brand profile. Do not duplicate the whole platform unless the new client truly needs a different workflow.
 
