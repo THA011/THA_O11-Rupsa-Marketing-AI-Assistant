@@ -1,6 +1,6 @@
 # Product Roadmap
 
-This roadmap is deliberately practical. The goal is to get a working local product first, then add heavier AI and statistics later.
+This roadmap is deliberately practical. The goal is to get a working local product first, then add heavier AI and statistics later. The big platform vision stays useful, but only after the demo and thesis contribution work.
 
 ## Phase 1 - Local RUPSA Prototype
 
@@ -63,24 +63,39 @@ Done when:
 
 - Campaign assumptions, variants, and results can be exported for analysis.
 
-## Phase 5 - Backend and Real AI
+## Phase 5 - Small Grounding Layer
+
+Add a narrow RAG workflow only for approved RUPSA facts.
+
+Build:
+
+- Document folder for SOPs, loan-product notes, and approved marketing rules.
+- Ingestion script.
+- Chunking and local embeddings.
+- Local Chroma or FAISS store.
+- Retrieval function that returns source snippets for campaign claims.
+
+Done when:
+
+- A campaign draft can avoid guessing factual loan or policy details.
+
+## Phase 6 - Backend and Local AI
 
 Only add this after the local workflow is clear.
 
 Build:
 
 - FastAPI backend.
-- PostgreSQL schema.
-- Authentication.
+- SQLite storage for the first backend version.
 - Saved campaigns.
-- Real AI provider adapter.
+- Local Ollama adapter if real text generation is needed.
 - Proper analytics records.
 
 Done when:
 
 - Campaigns can be saved, reopened, generated, scored, and reported from stored data.
 
-## Phase 6 - Multi-Organization Platform
+## Phase 7 - Multi-Organization Platform
 
 Turn the RUPSA prototype into a reusable platform.
 
@@ -95,4 +110,14 @@ Build:
 Done when:
 
 - A second organization can be added without rewriting the core workflow.
+
+## Future Work Only
+
+Keep these out of the first build:
+
+- Multi-agent automation teams.
+- Paid SaaS billing.
+- Production user management.
+- Social media publishing integrations.
+- Advanced modelling beyond the collected data.
 

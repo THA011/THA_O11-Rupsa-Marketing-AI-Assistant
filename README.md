@@ -4,6 +4,8 @@ RAIP is a local-first campaign workspace for RUPSA SACCO. The first version is a
 
 The longer-term direction is a reusable platform for SACCO marketing, campaign scoring, research notes, and business intelligence. RUPSA is the first profile, not the only possible client.
 
+The build should stay realistic for now: website, campaign workflow, poster assets, statistics/research support, and later a small local grounding layer for approved RUPSA facts. Bigger SaaS and multi-agent ideas belong in future work.
+
 ## What Works Now
 
 - Local website running on `http://localhost:3000`.
@@ -14,6 +16,7 @@ The longer-term direction is a reusable platform for SACCO marketing, campaign s
 - Local browser storage for Contact page notes.
 - RUPSA brand profile JSON.
 - Product notes, roadmap, module notes, and copy strategy.
+- RUPSA poster deck and exported campaign video under `assets/images/`.
 
 ## Run Locally
 
@@ -84,6 +87,7 @@ The important rule is simple: keep reusable workflow in the platform and keep cl
 - [Modules](docs/product/MODULES.md)
 - [Copy strategy](docs/product/COPY_STRATEGY.md)
 - [Development notes](docs/DEVELOPMENT_NOTES.md)
+- [Technical scope](docs/product/TECHNICAL_SCOPE.md)
 - [RUPSA brand profile](brand-profiles/rupsa-sacco.json)
 
 ## Current Limits
@@ -98,8 +102,8 @@ Not connected yet:
 - PostgreSQL.
 - Live social publishing.
 - Payment or subscription features.
+- Local RAG over approved RUPSA documents.
 
 ## Next Good Build
 
-Load `brand-profiles/rupsa-sacco.json` into the Platform page so the audience and channel options come from profile data instead of being written directly in HTML.
-
+Load `brand-profiles/rupsa-sacco.json` into the Platform page so the audience and channel options come from profile data instead of being written directly in HTML. After that, add a small local RAG proof-of-concept only for factual grounding, such as approved loan terms or SOP wording.
